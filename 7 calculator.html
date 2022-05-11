@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Simple Calculator</title>
+    </head>
+   
+    <body>    
+        <h1>Simple Calculator</h1>
+        <table class="addtable">
+            <tr>
+                <td><lable>Enter First number: </lable> </td>
+                <td><input type="text" id="firstnum"></td>
+            </tr>
+            <tr>
+                <td><lable>Enter Second number: </lable> </td>
+                <td><input type="text" id="secondnum"></td>
+            </tr>
+            <tr>
+                <td><lable>Result =</lable></td>
+                <td><span id="add"></span></td>
+            </tr>
+        </table>  
+        <div><button class="add_btn" onclick="add()">Add</button>
+            <button class="sub_btn" onclick="sub()">Sub</button>
+            <button class="mul_btn" onclick="mul()">Mul</button>
+            <button class="div_btn" onclick="div()">Div</button>
+            <button class="mod_btn" onclick="mod()">Mod</button>
+        </div>
+</body>       
+</html>
+<script>
+    function add()
+    {
+        var a=document.getElementById("firstnum").value;
+        var b=document.getElementById("secondnum").value;
+        var result = Number(a)+Number(b);
+        document.getElementById("add").innerHTML = result;
+    }
+    function sub()
+    {
+        var a=document.getElementById("firstnum").value;
+        var b=document.getElementById("secondnum").value;
+        var result = Number(a)-Number(b);
+        document.getElementById("add").innerHTML = result;
+    }
+    function mul()
+    {
+        var a=document.getElementById("firstnum").value;
+        var b=document.getElementById("secondnum").value;
+        var result = Number(a)*Number(b);
+        document.getElementById("add").innerHTML = result;
+    }
+    function div()
+    {
+        var a=document.getElementById("firstnum").value;
+        var b=document.getElementById("secondnum").value;
+        var result = Number(a)/Number(b);
+        document.getElementById("add").innerHTML = result;
+    }
+    function mod()
+    {
+        var a=document.getElementById("firstnum").value;
+        var b=document.getElementById("secondnum").value;
+        var result = Number(a)%Number(b);
+        document.getElementById("add").innerHTML = result;
+    }
+</script>

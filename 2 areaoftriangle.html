@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Area of Triangle</title>
+    </head>
+    
+        <style>
+        .area_table{
+            border: 5px solid gray;
+            font-size: 30;
+            font-weight: 100;
+            color: rgb(194, 3, 169);
+        } 
+        .tri_area_butn{
+            width: 200px;
+            height: 30px;
+            color: rgb(248, 248, 248);
+            background-color: rgb(6, 8, 134);
+            border-radius: 15px;
+            font-size: 16;
+        }
+        </style>
+        <body>
+            <h1>Area of Triangle</h1>
+
+        <table class="area_table">
+            <tr>
+                <td><lable>Enter base value : </lable> </td>
+                <td><input type="text" id="base"></td>
+            </tr>
+            <tr>
+                <td><lable>Enter height value: </lable> </td>
+                <td><input type="text" id="height"></td>
+            </tr>
+            <tr>
+                <td><lable>Area of Triangle = </lable></td>
+                <td><span id="triarea"></span></td>
+            </tr>
+            <tr>
+                <td><button class="tri_area_butn" onclick="triarea()">Caculate Area of Triangle</button> </td>
+                <td></td>
+            </tr>  
+        </table> 
+    </body>
+</html>
+<script>
+    function triarea()
+    {
+        var b=document.getElementById("base").value;
+        var h=document.getElementById("height").value;
+        var area=Number(b)*Number(h)/2;
+        document.getElementById("triarea").innerHTML=area;
+/*
+        num1=Number(b);
+        num2=Number(h);
+        num3=Number(area);
+        num3=num1*num2/2;*/
+        
+    }
+</script>

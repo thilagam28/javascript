@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Even number</title>
+    </head>
+    <body>
+        <h1>To Check Even Number or Not</h1>
+        <div>Enter any number :<input type="text" id="num"></div>        
+        <button onclick="even()">Check</button>
+    </body>
+</html>
+<script>
+    function even()
+    {
+        var n;
+        n=Number(n);              
+        n=document.getElementById("num").value;        
+            if(n%2==0)  
+                alert(n+"is Even Number");
+            else
+                alert(n+"is Not Even Number");     
+    }
+</script>

@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Addition of two numbers</title>
+    </head>
+    <style>
+        .addtable{
+            border: 1px solid gray;
+            font-size: 30;
+            font-weight: 100;
+            color: rgb(3, 7, 194);
+        } 
+        .addbutton{
+            width: 100px;
+            height: 30px;
+            color: rgb(248, 248, 248);
+            background-color: rgb(253, 48, 48);
+            border-radius: 15px;
+            font-size: 20;
+        }   
+    </style>
+    <body>    
+        <h1>Addition of Two numbers</h1>
+        <table class="addtable">
+            <tr>
+                <td><lable>Enter First number: </lable> </td>
+                <td><input type="text" id="firstnum"></td>
+            </tr>
+            <tr>
+                <td><lable>Enter Second number: </lable> </td>
+                <td><input type="text" id="secondnum"></td>
+            </tr>
+            <tr>
+                <td><lable>Addition of two numbers =</lable></td>
+                <td><span id="add"></span></td>
+            </tr>
+            <tr>
+                <td><button class="addbutton" onclick="add()">Add</button> </td>
+                <td></td>
+            </tr>  
+        </table>  
+</body>       
+</html>
+<script>
+    function add()
+    {
+        var a=document.getElementById("firstnum").value;
+        var b=document.getElementById("secondnum").value;
+        var result = Number(a)+Number(b);
+        document.getElementById("add").innerHTML = result;
+    }
+</script>
