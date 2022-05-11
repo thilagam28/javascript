@@ -9,26 +9,27 @@
         <div>B=<input type="text" id="num2"></div>
         <div>C=<input type="text" id="num3"></div>        
         <button onclick="largest()">Check</button>
-        <div>Largest number is :<span id="large"></span></div>
+        <div>Largest number is :<span id="large"></div>
     </body>
 </html>
 <script>
     function largest()
     {
-        var a,b,c;
-        a=Number(a); 
-        b=Number(b);
-        c=Number(c);             
+        var a,b,c;                    
         a=document.getElementById("num1").value; 
         b=document.getElementById("num2").value;
         c=document.getElementById("num3").value;
-
-            if(a>b&&a>c)  
+        a=Number(a); 
+        b=Number(b);
+        c=Number(c); 
+            if((a>b) && (a>c))  {
                document.getElementById("large").innerHTML=a;
-            else if(b>a&&b>c)
-                document.getElementById("large").innerHTML=b; 
+            }
+               else if(b>c)
+               {
+                document.getElementById("large").innerHTML=b;
+               }
                 else
                 document.getElementById("large").innerHTML=c; 
-
     }
 </script>
