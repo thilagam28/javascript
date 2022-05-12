@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <title>Food list</title>
+    </head>
+    <body>
+        <style>
+            .gridcontainer{
+                display: grid;
+                grid-template-columns: auto auto;
+                width: 700px;                
+                height: 100px;
+                column-width: 1%;                            
+            }
+            .griditem
+            {
+                display: grid;
+                grid-template-columns: auto auto;
+                width: 300px;
+                height: 80px;
+                border-bottom:1px solid rgb(155, 155, 151);                
+            }
+            .griditem1{
+                text-align: right;                                
+                width: 300px;
+                height: 80px;
+                border-bottom:1px solid rgb(155, 155, 151);                              
+            }
+            li{
+                list-style: none;
+            }
+            .quantity{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: white;
+                border-radius: 15px;
+                text-align: center;
+                margin-left: 200;
+                background-color: rgb(192, 47, 47); 
+                font-size: large;
+            }   
+            .amount{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: large;
+            }
+            .iname{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: large; 
+            }
+            .ivariety{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: medium; 
+                font-style: italic;
+            }
+            .iprice{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: large; 
+                color: red;                
+            }
+            input{
+                width: 10%;               
+            }  
+            @media screen and (min-width:48px) {
+            .gridcontainer{
+                display: grid;
+                grid-template-columns: auto;
+                }
+            }
+             @media screen and (min-width:768px) {
+                .gridcontainer{
+                display: grid;
+                grid-template-columns: auto auto;
+                }
+            }
+            @media screen and (min-width:992px) {
+            .gridcontainer{
+                display: grid;
+                grid-template-columns: auto auto auto auto;                
+                }
+            }            
+        </style>
+       <div class="gridcontainer">
+       <div class="griditem">
+        <ul>
+            <li class="iname">Sushi</li>
+            <li class="ivariety">Finest fish and veggies</li>
+            <li class="iprice">$22.99</li>
+        </ul>
+        </div>
+        <div class="griditem1">
+            <div class="amount"><p>Amount <input type="number"></p></div>
+            <div class="quantity"><p>+Add</p></div>
+        </div>
+        <div class="griditem">
+        <ul>
+            <li class="iname">Schnitzel</li>
+            <li class="ivariety">A German speciality</li>
+            <li class="iprice">$16.50</li>
+       </ul>
+        </div>
+        <div class="griditem1">
+            <div class="amount"><p>Amount <input type="number"></p></div>
+            <div class="quantity"><p>+Add</p></div>
+        </div>
+        <div class="griditem">
+        <ul>
+            <li class="iname">Barbecue Burger</li>
+            <li class="ivariety">American, raw, meaty</li>
+            <li class="iprice">$12.99</li>
+        </ul>
+        </div>
+        <div class="griditem1">
+            <div class="amount"><p>Amount <input type="number"></p></div>
+            <div class="quantity"><p>+Add</p></div>
+        </div>
+        <div class="griditem">
+        <ul>
+            <li class="iname">Green Bowl</li>
+            <li class="ivariety">Healthy...and green...</li>
+            <li class="iprice">$18.99</li>
+        </ul>
+        </div>
+        <div class="griditem1">
+            <div class="amount"><p>Amount <input type="number"></p></div>
+            <div class="quantity"><p>+Add</p></div>    
+        </div>
+        </div>
+    </body>
+</html>

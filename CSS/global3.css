@@ -1,0 +1,30 @@
+          *{
+                background-color: rgb(168, 27, 161);                
+            }
+            table{
+                table-layout: auto;
+                background-color: blue;
+                width: 400px;
+                height:100px;        
+                margin: auto;               
+                font-size: 22 ;
+                font-weight: bold;     
+            }
+            meter
+            {
+                background-color: blue;
+                width: 300;
+                height: 15;
+            }
+            h1,td{
+                background-color: blue;
+                width: 100px;
+                height:30px; 
+                 }           
+            .sub{
+                    background-color: white;
+                    width: 400;
+                    height: 30;                                   }
+             .sub1{
+                    background-color: white;                                                         
+                }

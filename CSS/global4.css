@@ -1,0 +1,42 @@
+*{
+    background-color: aqua;
+}
+table
+{            
+    table-layout: 600;
+    background-color: red;
+    margin: auto;
+    width: 400;
+    height: 50;
+}
+td
+{
+    background-color: red;            
+    width: 400;
+    height: 50;
+    font-size: 20;
+}
+h1
+{
+    background-color: red; 
+    text-align: center;
+}
+.textbox
+{
+    background-color: white;    
+    width: 200;
+    height: 30;                           
+}
+.button
+{
+    background-color: rgb(18, 117, 231);  
+    font-size: 16;
+    color: white;
+    margin-trim: auto;
+}
+img
+{
+    width: 150; 
+    height: 150;
+    background-color: red;
+}
