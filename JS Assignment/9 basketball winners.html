@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>
+            Basket Ball Score Board
+        </title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>Team 1: Salman</td>
+                <td><input type="text" id="s11"> </td>
+                <td><input type="text" id="s12"> </td>
+                <td><input type="text" id="s13"> </td>
+
+            </tr>
+            <tr>
+                <td>Team 2: Mike</td>
+                <td><input type="text" id="s21"> </td>
+                <td><input type="text" id="s22"> </td>
+                <td><input type="text" id="s23"> </td>
+            </tr>
+            <tr>
+                <td>Team 3: Mary</td>
+                <td><input type="text" id="s31"> </td>
+                <td><input type="text" id="s32"> </td>
+                <td><input type="text" id="s33"> </td>
+            </tr>
+            <tr>
+                <td><button onclick="avg()">Calculate Average</button></td>
+                <td><button onclick="winner()">Winner</button></td>
+            </tr>
+            <tr>
+                <td>Salman Average: <span id="sal_avg"></span></td>
+                <td>Mike Average: <span id="mike_avg"></span></td>
+                <td>Mary Average: <span id="mary_avg"></span></td>
+            </tr>
+        </table>
+    </body>
+
+</html>
+<script>
+    var s1,s2,s3,m1,m2,m3,ma1,ma2,ma3;
+    var s_avg,m_avg,ma_avg;
+    
+    
+    function avg()
+    {
+    s1=document.getElementById("s11").value;
+    s2=document.getElementById("s12").value;
+    s3=document.getElementById("s13").value;
+    m1=document.getElementById("s21").value;
+    m2=document.getElementById("s22").value;
+    m3=document.getElementById("s23").value;
+    ma1=document.getElementById("s31").value;
+    ma2=document.getElementById("s32").value;
+    ma3=document.getElementById("s33").value;
+        s1=Number(s1);
+        s2=Number(s2);
+        s3=Number(s3);
+        m1=Number(m1);
+        m2=Number(m2);
+        m3=Number(m3);
+        ma1=Number(ma1);
+        ma2=Number(ma2);
+        ma3=Number(ma3);
+        s_avg=Number(s_avg);
+        m_avg=Number(m_avg);
+        ma_avg=Number(ma_avg);
+
+
+        s_avg=(s1+s2+s3)/3;
+        m_avg=(m1+m2+m3)/3;
+        ma_avg=(ma1+ma2+ma3)/3;
+        document.getElementById("sal_avg").innerHTML=s_avg;
+        document.getElementById("mike_avg").innerHTML=m_avg;
+        document.getElementById("mary_avg").innerHTML=ma_avg;
+    }
+
+    function winner()
+    {
+        if(s_avg>m_avg&&s_avg>ma_avg)
+            console.log("Salman is winner and his average is :"+s_avg);
+        else if(m_avg>ma_avg)
+            console.log("Mike is winner and his average is :"+m_avg);
+        else
+            console.log("Mary is winner and her average is :"+ma_avg);
+        
+    }
+
+</script>

@@ -1,0 +1,105 @@
+<html>
+    <head><title> BMI calculation</title>
+</head>
+<bobdy>
+    <table>
+        <tr>
+            <td>
+                <label><h3>Enter Harry's Mass & height</h3></label>
+            </td>
+            <td>
+                <label><h3>Enter salman's Mass & height</h3></label>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+            <label>Mass :</label><input type="text" id="harry_mass">
+        </td>
+            
+            <td>
+                <label>Mass :</label><input type="text" id="salman_mass">
+            </td>
+           
+        </tr>
+        <tr>  
+            <td>
+                <label>Height :</label><input type="text" id="harry_height">
+            </td>
+            <td>
+                <label>Height :</label><input type="text" id="salman_height">
+            </td>
+        </tr>
+        <tr>              
+            <td>
+                <label>Haary 's BMI' :</label><button onclick="bmi()">Calculate BMI</button>
+            </td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>              
+            <td>
+               <span id="harry"></span>
+            </td>
+            <td>
+                <span id="salman"></span>
+            </td>
+        </tr>
+    </table>
+</bobdy>
+</html>
+<script>
+    function bmi()
+    {
+    var h_mass,h_height,s_mass,s_height;
+    h_mass=document.getElementById("harry_mass").value;
+    h_height=document.getElementById("harry_height").value;
+    s_mass=document.getElementById("salman_mass").value;
+    s_height=document.getElementById("salman_height").value;
+    h_mass=Number(h_mass);
+    h_height=Number(h_height);
+    s_mass=Number(s_mass);
+    s_height=Number(s_height);
+    h_bmi=h_mass/(h_height*h_height);
+    s_bmi=s_mass/(s_height*s_height);
+    document.getElementById("harry").innerHTML=h_bmi;
+    document.getElementById("salman").innerHTML=s_bmi;
+    
+    var c=Boolean(h_bmi>s_bmi);
+    if(c===true)
+     console.log("Harry's BMI is highest");
+    else
+        console.log("Salman's BMI is highest");
+   
+    }
+
+
+
+    
+   /* Bool c=h_bmi>sbmi;
+    if(c==true)
+     console.log("Harry's BMI is highest");
+    else
+        console.log("Salman's BMI is highest");
+    }
+
+
+    /*
+    var bmi, mass, height;
+    function BMI(mass, height)
+    {
+        mass=Number(mass);
+        height=Number(height);
+        bmi=Number(bmi);
+
+        bmi=mass/(height*height);
+        document.getElementById("bmi").innerHTML=bmi;
+        alert(bmi);
+    }
+        
+        console.log(bmi);
+*/
+
+</script>
+
