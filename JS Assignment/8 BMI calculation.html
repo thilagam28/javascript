@@ -53,16 +53,22 @@
     function bmi()
     {
     var h_mass,h_height,s_mass,s_height;
+    //Harry's Mass & height
     h_mass=document.getElementById("harry_mass").value;
     h_height=document.getElementById("harry_height").value;
+
+    //salman's Mass & height
     s_mass=document.getElementById("salman_mass").value;
     s_height=document.getElementById("salman_height").value;
+
     h_mass=Number(h_mass);
     h_height=Number(h_height);
     s_mass=Number(s_mass);
     s_height=Number(s_height);
+
     h_bmi=h_mass/(h_height*h_height);
     s_bmi=s_mass/(s_height*s_height);
+
     document.getElementById("harry").innerHTML=h_bmi;
     document.getElementById("salman").innerHTML=s_bmi;
     
@@ -73,17 +79,6 @@
         console.log("Salman's BMI is highest");
    
     }
-
-
-
-    
-   /* Bool c=h_bmi>sbmi;
-    if(c==true)
-     console.log("Harry's BMI is highest");
-    else
-        console.log("Salman's BMI is highest");
-    }
-
 
     /*
     var bmi, mass, height;

@@ -40,8 +40,7 @@
 </html>
 <script>
     var s1,s2,s3,m1,m2,m3,ma1,ma2,ma3;
-    var s_avg,m_avg,ma_avg;
-    
+    var s_avg,m_avg,ma_avg;    
     
     function avg()
     {
@@ -67,10 +66,11 @@
         m_avg=Number(m_avg);
         ma_avg=Number(ma_avg);
 
-
+        //calculating average
         s_avg=(s1+s2+s3)/3;
         m_avg=(m1+m2+m3)/3;
         ma_avg=(ma1+ma2+ma3)/3;
+
         document.getElementById("sal_avg").innerHTML=s_avg;
         document.getElementById("mike_avg").innerHTML=m_avg;
         document.getElementById("mary_avg").innerHTML=ma_avg;
@@ -78,12 +78,24 @@
 
     function winner()
     {
+        //Mary's score is 0
+        if(ma_avg==0)
+        {
+        if(s_avg>m_avg)
+            console.log("Salman is winner and his average is :"+s_avg);
+        else
+            console.log("Mike is winner and his average is :"+m_avg);
+        }
+        //compare with Mary's score 
+        if(ma_avg!=0)
+        {
         if(s_avg>m_avg&&s_avg>ma_avg)
             console.log("Salman is winner and his average is :"+s_avg);
         else if(m_avg>ma_avg)
             console.log("Mike is winner and his average is :"+m_avg);
         else
             console.log("Mary is winner and her average is :"+ma_avg);
+        }
         
     }
 
