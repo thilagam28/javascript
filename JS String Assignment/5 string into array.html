@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>String into array</title>
+    </head>
+    <body>
+        <h1>String into array</h1>
+        <table>
+            <tr>
+                <td>Enter the string :</td>
+                <td><input type="text" id="any_str"></td>
+                <td><button onclick="str_to_array()">Convert string into array</button></td>                
+            </tr>
+            <tr>
+                <td>String into array </td>
+                <td>[<span id="ary"></span>]</td>
+            </tr>
+        </table>
+    </body>
+</html>
+<script>
+    function str_to_array() 
+    {    
+    var str = document.getElementById("any_str").value;
+    //convert string into array using split
+    var result = str.split("");
+    document.getElementById("ary").innerHTML=result;
+    console.log(result);
+    }
+</script>

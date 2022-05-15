@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Replace the string</title>
+    </head>
+    <body>
+        <h1>Replace the string</h1>
+        <div>Given input: "This is new programming"</div>
+        <div>Replaced Ouput :<span id="replace"></span></div>
+    </body>
+</html>
+<script>
+        var input="This is new programming";       
+        //Replace the string
+        var replace=input.replace("programming","language");
+        console.log("Given string"+input);
+        console.log("change string"+replace);
+        document.getElementById("replace").innerHTML=replace;
+   </script>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Palindrome</title>
+    </head>
+    <body>
+        <h1>Palindrome</h1>
+        
+        <table>
+            <tr>
+                <td>Enter the string :</td>
+                <td><input type="text" id="any_str"></td>
+                <td><button onclick="s_palindrome()">Check</button></td>                
+            </tr>
+        </table>
+    </body>
+</html>
+<script>
+    function s_palindrome()
+    {
+        var str = document.getElementById("any_str").value;
+        //convert string into reverse
+        var rev = str.split("").reverse().join("");
+       //check given string is palindrome or not
+        if(str===rev)
+            alert("Given string is Palindrome");
+        else
+            alert("Given string is Not Palindrome");
+    }
+</script>

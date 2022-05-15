@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Reverse the string</title>
+    </head>
+    <body>
+        <h1>Reverse the string</h1>
+        <table>
+            <tr>
+                <td>Enter the string :</td>
+                <td><input type="text" id="any_str"></td>
+                <td><button onclick="str_rev()">convert into reverse</button></td>                
+            </tr>
+            <tr>
+                <td>Reverse the string </td>
+                <td><span id="reverse"></span></td>
+            </tr>
+        </table>
+    </body>
+</html>
+<script>
+    function str_rev() 
+    {    
+    var str = document.getElementById("any_str").value;
+    //convert string into reverse
+    var rev = str.split("").reverse().join("");
+    document.getElementById("reverse").innerHTML=rev;
+    console.log(rev);
+
+    ////convert string into reverse
+    var spl=str.split("");
+    var j=spl.reverse();
+    var result=j.join("");
+    console.log(result);
+    } 
+</script>

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Length of string</title>
+    </head>
+    <body>
+        <h1>Length of string</h1>
+        <table>
+            <tr>
+                <td>Enter the string :</td>
+                <td><input type="text" id="any_str"></td>
+                <td><button onclick="s_length(any_str)">Find Length</button></td>
+            </tr>
+            <tr>
+                <td>Length of the string = </td>
+                <td><span id="length"></span></td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+<script>
+    function s_length()
+    { 
+        var s;
+        s=document.getElementById("any_str").value;
+    
+        //find length of the string 
+        var len=s.length;
+
+        alert("Length of string ="+len);
+        console.log(len);
+        document.getElementById("length").innerHTML=len;
+    }
+</script>

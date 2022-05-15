@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Anagrams</title>
+    </head>
+    <body>
+        <h1>Anagrams</h1>
+        
+        <table>
+            <tr>
+                <td>Enter the string1 :</td>
+                <td><input type="text" id="any_str1"></td>               
+            </tr>
+            <tr>
+                <td>Enter the string2 :</td>
+                <td><input type="text" id="any_str2"></td>
+                <td><button onclick="s_anagrams()">Check</button></td>                
+            </tr>
+        </table>
+    </body>
+</html>
+<script>
+    function s_anagrams()
+    {
+        var str1 = document.getElementById("any_str1").value;
+        var str2 = document.getElementById("any_str2").value;
+        //check string length 
+        var len1=str1.length;
+        var len2=str2.length;
+        if(len1!=len2){
+          console.log("Invalid Input");
+          alert("Invalid Input..String with different length");
+        }
+
+        //convert string into sort
+        var sort_str1 = str1.split("").sort().join("");
+        var sort_str2 = str2.split("").sort().join("");
+        console.log("Input 1:"+str1,"Input 2:"+str2);
+        console.log("Input 1:"+sort_str1,"Input 2:"+sort_str2);
+                
+       //check given string is anagrams or not
+        if(sort_str1===sort_str2){
+            alert("True..Its Anagrams");
+            console.log("True..Its Anagrams");
+        }
+        else{
+            alert("False...Its not Anagrams");
+            console.log("False...Its not Anagrams");
+        }
+    }
+</script>
