@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>SubArray sequence less than zero</title>
+    </head>
+    <body>
+        <h1>SubArray sequence less than zero</h1>
+        <div>Input : [<span id="input"></span>]</div>
+    </body>
+</html>
+<script>
+    //var ary=[2,3,4,5,6,0,2,2,3,-1,4,5,3];
+    var ary=[2,0,2,2,-1,4,5];
+    document.getElementById("input").innerHTML=ary;
+    
+    //SubArray sequence less than zero  
+    var start=0;    
+    for(var i=0;i<ary.length;i++)
+    {        
+        for(var j=start;j<ary.length;j++)
+        {
+        if(ary[j]<=0)
+        {  
+            var end=j-1; 
+        }        
+        }
+        var temp=ary.slice(start,end);
+        start=j+1;
+        console.log(temp);
+       
+    }  
+       
+</script>

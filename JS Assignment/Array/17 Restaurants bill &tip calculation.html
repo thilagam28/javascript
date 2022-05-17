@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Restaurants Bill calculation</title>
+    </head>
+    <body>
+        <h1>Restaurants Bill calculation</h1>
+        <div>Input : Bill Amount [<span id="input"></span>]</div>
+        <div>Output : Paid Amount with tips [<span id="print"></span>]</div>
+        
+    </body>
+</html>
+<script>
+    var bill=[124,48,268];
+    document.getElementById("input").innerHTML=bill;
+
+    var paid;
+    paid=Number(paid);
+    bill=Number(bill);
+    for (var i=0;i<bill.length;i++)
+    {
+        
+        if (bill[i]<50)
+        {
+            paid=bill[i]*0.2;
+            console.log(paid);
+            document.getElementById("print").innerHTML=paid;
+        }
+        else if (bill[i]>50 || bill[i]<200)
+        {
+            paid=bill[i]*0.15;
+            console.log(paid);
+            document.getElementById("print").innerHTML=paid;
+        }
+        else if (bill[i]>200)
+        {
+            paid=bill[i]*0.1;
+            console.log(paid);
+            document.getElementById("print").innerHTML=paid;
+        }
+        else 
+        console.log("Wrong stmt");
+        
+        
+    }
+    console.log(paid);
+    document.getElementById("print").innerHTML=paid;
+    
+
+</script>
