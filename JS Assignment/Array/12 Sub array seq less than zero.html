@@ -8,25 +8,24 @@
     </body>
 </html>
 <script>
-    //var ary=[2,3,4,5,6,0,2,2,3,-1,4,5,3];
-    var ary=[2,0,2,2,-1,4,5];
+    var ary=[2,3,4,5,6,0,2,2,3,-1,4,5,3];
+    var start=0;
+    var temp=0;
+    var end=0;
+    temp=Number(temp);
+    console.log("Input : ["+ary +"]");
     document.getElementById("input").innerHTML=ary;
-    
-    //SubArray sequence less than zero  
-    var start=0;    
-    for(var i=0;i<ary.length;i++)
-    {        
-        for(var j=start;j<ary.length;j++)
+
+    for (var i=0;i<ary.length+1;i++) {
+        temp=ary[i];
+        //checking for slice array less than zero
+        if(temp<=0 || temp==null) // check less than zero & array end
         {
-        if(ary[j]<=0)
-        {  
-            var end=j-1; 
-        }        
-        }
-        var temp=ary.slice(start,end);
-        start=j+1;
-        console.log(temp);
-       
+        end=i;                              //if array element less than zero assign as end
+        var result=ary.slice(start,end);
+        start=i+1;                                                  
+        }   
+        console.log("["+result+" ]");       
     }  
-       
+    
 </script>

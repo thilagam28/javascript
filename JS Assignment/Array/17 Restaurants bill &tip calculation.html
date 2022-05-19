@@ -4,46 +4,49 @@
     </head>
     <body>
         <h1>Restaurants Bill calculation</h1>
+        <div><button onclick="tip_calc()">Calculate Tips & paid bill</button></div>
         <div>Input : Bill Amount [<span id="input"></span>]</div>
-        <div>Output : Paid Amount with tips [<span id="print"></span>]</div>
+        <div>Output : Tips for each bill [<span id="tips"></span>]</div>
+        <div>Paid Amount with tips [<span id="paid"></span>]</div>
         
     </body>
 </html>
 <script>
-    var bill=[124,48,268];
-    document.getElementById("input").innerHTML=bill;
+    var bills=[124,48,268];
+    var tips=[];
+    var paid=[];
+    console.log(bills);
+    document.getElementById("input").innerHTML=bills;
 
-    var paid;
-    paid=Number(paid);
-    bill=Number(bill);
-    for (var i=0;i<bill.length;i++)
-    {
-        
-        if (bill[i]<50)
-        {
-            paid=bill[i]*0.2;
-            console.log(paid);
-            document.getElementById("print").innerHTML=paid;
+    function tip_calc(){    
+         
+        for (var i=0;i<bills.length;i++)
+        {           
+            var perc;
+            var bill=this.bills[i];
+
+            if (bill<50)
+            {
+            perc=0.2;           
+            }
+            else if (bill>=50 && bill<200)
+            {
+                perc=0.15;           
+            }
+            else 
+            {
+                perc=0.1;            
+            }
+            this.tips[i]=bill*perc;
+            this.paid[i]=bill+bill*perc;
+                    
         }
-        else if (bill[i]>50 || bill[i]<200)
-        {
-            paid=bill[i]*0.15;
-            console.log(paid);
-            document.getElementById("print").innerHTML=paid;
-        }
-        else if (bill[i]>200)
-        {
-            paid=bill[i]*0.1;
-            console.log(paid);
-            document.getElementById("print").innerHTML=paid;
-        }
-        else 
-        console.log("Wrong stmt");
-        
-        
+        console.log(tips);
+        console.log(paid);
+        document.getElementById("tips").innerHTML=tips;
+        document.getElementById("paid").innerHTML=paid;
     }
-    console.log(paid);
-    document.getElementById("print").innerHTML=paid;
+    
     
 
 </script>
